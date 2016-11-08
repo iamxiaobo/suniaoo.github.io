@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="Web开发者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiaobo's Blog">
-<meta property="og:url" content="http://www.sunxiaobo.com/index.html">
+<meta name="description" content="摘要本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
+Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
+Universal Link的优势通过Universal L">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Universal Link使用总结">
+<meta property="og:url" content="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/index.html">
 <meta property="og:site_name" content="Xiaobo's Blog">
-<meta property="og:description" content="Web开发者">
+<meta property="og:description" content="摘要本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
+Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
+Universal Link的优势通过Universal L">
+<meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/error.jpeg">
+<meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/domain.jpeg">
+<meta property="og:updated_time" content="2016-11-08T14:25:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiaobo's Blog">
-<meta name="twitter:description" content="Web开发者">
+<meta name="twitter:title" content="Universal Link使用总结">
+<meta name="twitter:description" content="摘要本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
+Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
+Universal Link的优势通过Universal L">
+<meta name="twitter:image" content="http://www.sunxiaobo.com/images/universal link使用总结/error.jpeg">
 
 
 
@@ -113,10 +123,10 @@
 
 
 
-  <link rel="canonical" href="http://www.sunxiaobo.com/"/>
+  <link rel="canonical" href="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/"/>
 
 
-  <title> 前端技术, 无线开发, HTML5, Web - Xiaobo's Blog </title>
+  <title> Universal Link使用总结 | Xiaobo's Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -147,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -236,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -258,10 +266,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/blog/2016/11/08/Universal-Link使用总结/" itemprop="url">
-                  Universal Link使用总结
-                </a>
+                Universal Link使用总结
               
             
           </h1>
@@ -308,9 +313,7 @@
       
 
       
-        
-          
-            <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。</p>
+        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。</p>
 <h2 id="Universal-Link简介"><a href="#Universal-Link简介" class="headerlink" title="Universal Link简介"></a>Universal Link简介</h2><p>苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。</p>
 <h2 id="Universal-Link的优势"><a href="#Universal-Link的优势" class="headerlink" title="Universal Link的优势"></a>Universal Link的优势</h2><p>通过Universal Link，弥补了以往iOS下在Web里做应用调起的短板:</p>
 <ol>
@@ -374,16 +377,20 @@
 <p>那这里怎么办呢？别忘了在实现部分我们提过要绑定两个域名，另外的域名就是在这里用到的，点击跳转时跳转到和当前域名不一样的另外的域名就行啦。</p>
 <p>这也是上文提到绑定click事件修改location.href为universal link地址场景比较常用的原因，我们需要在click事件中判断当前域名，然后把location.href改到另外的域名。假如是服务端生成模板的话也可以直接在模板引擎中设置相反的值，都是一样的。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -391,132 +398,51 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2016/10/31/gitcm,让你提交代码更自由/" rel="next" title="gitcm,让你提交代码更自由">
+                <i class="fa fa-chevron-left"></i> gitcm,让你提交代码更自由
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/blog/2016/10/31/gitcm,让你提交代码更自由/" itemprop="url">
-                  gitcm,让你提交代码更自由
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-31T08:46:23+08:00" content="2016-10-31">
-              2016-10-31
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/2016/10/31/gitcm,让你提交代码更自由/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/10/31/gitcm,让你提交代码更自由/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>开博第一篇介绍自己开发的一款工具：<strong><a href="https://github.com/suniaoo/gitcm" target="_blank" rel="external">gitcm</a></strong> , 通过它自动管理你的Git配置。</p>
-<h2 id="gitcm要解决的问题"><a href="#gitcm要解决的问题" class="headerlink" title="gitcm要解决的问题"></a>gitcm要解决的问题</h2><p>通常开发者都会配置一个全局的git config, 包括各种<strong>alias</strong>，<strong>editor</strong>，以及<strong>user.name</strong>和<strong>user.email</strong>, 下面是我的.gitconfig文件:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[color]</div><div class="line">  ui = auto</div><div class="line">[<span class="built_in">alias</span>]</div><div class="line">  st = status</div><div class="line">  co = checkout</div><div class="line">  ci = commit</div><div class="line">  br = branch</div><div class="line">  unstage = reset HEAD</div><div class="line">  cl = <span class="built_in">clone</span></div><div class="line">[core]</div><div class="line">  editor = vim</div><div class="line">[push]</div><div class="line">  default = simple</div><div class="line">[user]</div><div class="line">  name = sunxiaobo</div><div class="line">  email = sunxiaobo.cn@gmail.com</div></pre></td></tr></table></figure>
-<p>配置文件中各种属性，这里就不一一介绍。<strong>gitcm的作用就是帮你管理整个配置文件</strong>，嗯…听起来好像不太有用？</p>
-<p>OK，考虑这样一种情况：</p>
-<p>假设开发者小博在公司电脑上配置了全局的gitconfig，<code>user.name</code>和<code>user.email</code>都是公司信息，方便clone公司项目后免配置直接提交代码。有一天小博下班后用公司电脑浏览github，为一个热门项目提交了<strong>pull request</strong>并被<strong>merge request</strong>。为热门项目提交PR是很令人开心的事儿，但突然小博发现忘记为这个项目单独配置<code>user.name</code>和<code>user.email</code>，这个开源项目的日志里竟然显示了小博公司的邮箱地址，so sad.</p>
-<p>这就是gitcm要帮你解决的问题，自动化管理gitconfig配置。</p>
-<h2 id="gitcm的策略"><a href="#gitcm的策略" class="headerlink" title="gitcm的策略"></a>gitcm的策略</h2><p>Git在代码提交时，查找提交用户者信息的策略是这样:<br>1、尝试从当前目录下的<strong>.git/config</strong>里读取<br>2、如果流程1失败，从<strong>~/.gitconfig</strong>中读取<br>3、如果流程2也失败，从<strong>/etc/gitconfig</strong>中读取<br>4、系统提示未配置用户信息，提醒配置</p>
-<p>假设公司项目都在<strong>~/work</strong>目录下，github上项目在<strong>~/github</strong>项目下。依照git的策略，我们可以将公司git用户信息配置到<strong>~/.gitconfig</strong>里，然后对github下每个目录单独再做配置；反之如果将<strong>~/github</strong>配置的用户信息配置到<strong>~/.gitconfig</strong>里，<strong>~/work</strong>下的项目就需要各个去配置。</p>
-<p>有没有觉得这样很繁琐？</p>
-<p>假设Git能支持这样一种策略: 在<strong>~/work</strong>下配置一个<strong>.gitconfig</strong>文件，<strong>~/work</strong>下所有项目都用<strong>~/work/.gitconfig</strong>中用户信息。对<strong>~/github</strong>也一样，配置<strong>.gitconfig</strong>文件后，<strong>~/github</strong>下所有项目提交时都从<strong>~/github/.gitconfig</strong>中读取用户信息。遗憾的是，Git并不支持这个策略。</p>
-<p>讲了这么多，我想说其实gitcm的策略就是这样，支持不用.gitconfig这个文件，因为可能和~/.gitconfig冲突。</p>
-<h2 id="gitcm使用方式"><a href="#gitcm使用方式" class="headerlink" title="gitcm使用方式"></a>gitcm使用方式</h2><p>请访问Github上项目地址：<strong><a href="https://github.com/suniaoo/gitcm" target="_blank" rel="external">gitcm</a></strong>，内有详细说明文档，有问题请提到 <strong><a href="https://github.com/suniaoo/gitcm/issues" target="_blank" rel="external">Issues</a></strong> 或在本篇下面留言。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="blog/2016/11/08/Universal-Link使用总结/"
+     data-title="Universal Link使用总结"
+     data-content=""
+     data-url="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -524,6 +450,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="blog/2016/11/08/Universal-Link使用总结/"
+           data-title="Universal Link使用总结" data-url="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -543,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -587,6 +530,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link简介"><span class="nav-number">2.</span> <span class="nav-text">Universal Link简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link的优势"><span class="nav-number">3.</span> <span class="nav-text">Universal Link的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link的接入"><span class="nav-number">4.</span> <span class="nav-text">Universal Link的接入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">4.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端"><span class="nav-number">4.2.</span> <span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端"><span class="nav-number">4.3.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端和客户端之间通信"><span class="nav-number">4.4.</span> <span class="nav-text">服务端和客户端之间通信</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link那些坑"><span class="nav-number">5.</span> <span class="nav-text">Universal Link那些坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#触发场景"><span class="nav-number">5.1.</span> <span class="nav-text">触发场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Universal-Link绑定域名A下打开Universal-Link"><span class="nav-number">5.2.</span> <span class="nav-text">在Universal Link绑定域名A下打开Universal Link</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -687,6 +641,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
