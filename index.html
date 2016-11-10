@@ -259,115 +259,6 @@
             
               
                 
-                <a class="post-title-link" href="/blog/2016/11/10/gitcm,让你提交代码更自由/" itemprop="url">
-                  gitcm,让你提交代码更自由
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-10T22:14:50+08:00" content="2016-11-10">
-              2016-11-10
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/blog/2016/11/10/gitcm,让你提交代码更自由/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/11/10/gitcm,让你提交代码更自由/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>开博第一篇介绍自己开发的一款工具：<strong><a href="https://github.com/suniaoo/gitcm">gitcm</a></strong> , 通过它自动管理你的Git配置。</p>
-<h2 id="gitcm要解决的问题"><a href="#gitcm要解决的问题" class="headerlink" title="gitcm要解决的问题"></a>gitcm要解决的问题</h2><p>通常开发者都会配置一个全局的git config, 包括各种<strong>alias</strong>，<strong>editor</strong>，以及<strong>user.name</strong>和<strong>user.email</strong>, 下面是我的.gitconfig文件:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[color]</div><div class="line">  ui = auto</div><div class="line">[<span class="built_in">alias</span>]</div><div class="line">  st = status</div><div class="line">  co = checkout</div><div class="line">  ci = commit</div><div class="line">  br = branch</div><div class="line">  unstage = reset HEAD</div><div class="line">  cl = <span class="built_in">clone</span></div><div class="line">[core]</div><div class="line">  editor = vim</div><div class="line">[push]</div><div class="line">  default = simple</div><div class="line">[user]</div><div class="line">  name = sunxiaobo</div><div class="line">  email = sunxiaobo.cn@gmail.com</div></pre></td></tr></table></figure>
-<p>配置文件中各种属性，这里就不一一介绍。<strong>gitcm的作用就是帮你管理整个配置文件</strong>，嗯…听起来好像不太有用？</p>
-<p>OK，考虑这样一种情况：</p>
-<p>假设开发者小博在公司电脑上配置了全局的gitconfig，<code>user.name</code>和<code>user.email</code>都是公司信息，方便clone公司项目后免配置直接提交代码。有一天小博下班后用公司电脑浏览github，为一个热门项目提交了<strong>pull request</strong>并被<strong>merge request</strong>。为热门项目提交PR是很令人开心的事儿，但突然小博发现忘记为这个项目单独配置<code>user.name</code>和<code>user.email</code>，这个开源项目的日志里竟然显示了小博公司的邮箱地址，so sad.</p>
-<p>这就是gitcm要帮你解决的问题，自动化管理gitconfig配置。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/blog/2016/11/10/gitcm,让你提交代码更自由/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/blog/2016/11/08/Universal-Link使用总结/" itemprop="url">
                   Universal Link使用总结
                 </a>
@@ -382,7 +273,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-08T22:25:31+08:00" content="2016-11-08">
+            <time itemprop="dateCreated" datetime="2016-11-08T00:00:00+08:00" content="2016-11-08">
               2016-11-08
             </time>
           </span>
@@ -464,6 +355,115 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/blog/2016/10/08/gitcm,让你提交代码更自由/" itemprop="url">
+                  gitcm,让你提交代码更自由
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-08T00:00:00+08:00" content="2016-10-08">
+              2016-10-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/blog/2016/10/08/gitcm,让你提交代码更自由/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/10/08/gitcm,让你提交代码更自由/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>开博第一篇介绍自己开发的一款工具：<strong><a href="https://github.com/suniaoo/gitcm">gitcm</a></strong> , 通过它自动管理你的Git配置。</p>
+<h2 id="gitcm要解决的问题"><a href="#gitcm要解决的问题" class="headerlink" title="gitcm要解决的问题"></a>gitcm要解决的问题</h2><p>通常开发者都会配置一个全局的git config, 包括各种<strong>alias</strong>，<strong>editor</strong>，以及<strong>user.name</strong>和<strong>user.email</strong>, 下面是我的.gitconfig文件:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[color]</div><div class="line">  ui = auto</div><div class="line">[<span class="built_in">alias</span>]</div><div class="line">  st = status</div><div class="line">  co = checkout</div><div class="line">  ci = commit</div><div class="line">  br = branch</div><div class="line">  unstage = reset HEAD</div><div class="line">  cl = <span class="built_in">clone</span></div><div class="line">[core]</div><div class="line">  editor = vim</div><div class="line">[push]</div><div class="line">  default = simple</div><div class="line">[user]</div><div class="line">  name = sunxiaobo</div><div class="line">  email = sunxiaobo.cn@gmail.com</div></pre></td></tr></table></figure>
+<p>配置文件中各种属性，这里就不一一介绍。<strong>gitcm的作用就是帮你管理整个配置文件</strong>，嗯…听起来好像不太有用？</p>
+<p>OK，考虑这样一种情况：</p>
+<p>假设开发者小博在公司电脑上配置了全局的gitconfig，<code>user.name</code>和<code>user.email</code>都是公司信息，方便clone公司项目后免配置直接提交代码。有一天小博下班后用公司电脑浏览github，为一个热门项目提交了<strong>pull request</strong>并被<strong>merge request</strong>。为热门项目提交PR是很令人开心的事儿，但突然小博发现忘记为这个项目单独配置<code>user.name</code>和<code>user.email</code>，这个开源项目的日志里竟然显示了小博公司的邮箱地址，so sad.</p>
+<p>这就是gitcm要帮你解决的问题，自动化管理gitconfig配置。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/blog/2016/10/08/gitcm,让你提交代码更自由/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -515,7 +515,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
