@@ -96,7 +96,7 @@ Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和�
 Universal Link的优势通过Universal L">
 <meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/error.jpeg">
 <meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/domain.jpeg">
-<meta property="og:updated_time" content="2016-11-08T14:25:31.000Z">
+<meta property="og:updated_time" content="2016-11-10T14:13:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Universal Link使用总结">
 <meta name="twitter:description" content="摘要本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
@@ -328,6 +328,7 @@ Universal Link的优势通过Universal L">
 <li>结合pageshow, pagehide等事件<br>这些方案都是开发者hack出来的，非官方推荐和支持，总结成五个字就是:都不太靠谱。</li>
 </ol>
 <p>对于问题2，大多数公司和开发者都无解。</p>
+<a id="more"></a>
 <p>对于问题3和4，就是方案不统一导致的体验也有差异。比如用location.href在Safari里做应用调起，假如没有安装App，会有如下弹框提示:<br><img src="/images/universal link使用总结/error.jpeg" alt="location.href错误提示" width="50%" border="0"></p>
 <p>如果用了Universal Link，这些问题都会被解决!</p>
 <h2 id="Universal-Link的接入"><a href="#Universal-Link的接入" class="headerlink" title="Universal Link的接入"></a>Universal Link的接入</h2><p>苹果官方提供的开发文档：<a href="https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html" target="_blank" rel="external">App Search Programming Guide: Support Universal Links</a>，下面简要介绍下各部分实现。</p>
@@ -401,13 +402,13 @@ Universal Link的优势通过Universal L">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2016/10/31/gitcm,让你提交代码更自由/" rel="next" title="gitcm,让你提交代码更自由">
-                <i class="fa fa-chevron-left"></i> gitcm,让你提交代码更自由
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2016/11/10/gitcm,让你提交代码更自由/" rel="prev" title="gitcm,让你提交代码更自由">
+                gitcm,让你提交代码更自由 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
