@@ -2,29 +2,29 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://www.sunxiaobo.com/tags/iOS/</loc>
-        <lastmod>2016-11-10T14:21:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.sunxiaobo.com/tags/%E5%BA%94%E7%94%A8%E8%B0%83%E8%B5%B7/</loc>
-        <lastmod>2016-11-10T14:21:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.sunxiaobo.com/tags/git/</loc>
-        <lastmod>2016-11-10T14:21:42.000Z</lastmod>
+        <lastmod>2016-11-10T14:24:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.sunxiaobo.com/tags/github/</loc>
-        <lastmod>2016-11-10T14:21:42.000Z</lastmod>
+        <lastmod>2016-11-10T14:24:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/iOS/</loc>
+        <lastmod>2016-11-10T14:24:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/%E5%BA%94%E7%94%A8%E8%B0%83%E8%B5%B7/</loc>
+        <lastmod>2016-11-10T14:24:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
