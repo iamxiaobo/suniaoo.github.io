@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="摘要在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。">
+<meta name="description" content="在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。
+场景复原在单页应用中，页面切换都是通过监听路由变动，再动态获取下一页内容并展示。通常在获取新内容之前会伴有修改title的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单页应用在Webview下修改标题失效问题分析">
 <meta property="og:url" content="http://www.sunxiaobo.com/blog/2016/12/08/单页应用在Webview下修改标题失效问题分析/index.html">
 <meta property="og:site_name" content="Xiaobo's Blog">
-<meta property="og:description" content="摘要在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。">
-<meta property="og:updated_time" content="2016-12-08T14:28:08.000Z">
+<meta property="og:description" content="在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。
+场景复原在单页应用中，页面切换都是通过监听路由变动，再动态获取下一页内容并展示。通常在获取新内容之前会伴有修改title的">
+<meta property="og:updated_time" content="2016-12-08T14:31:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单页应用在Webview下修改标题失效问题分析">
-<meta name="twitter:description" content="摘要在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。">
+<meta name="twitter:description" content="在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过document.title更新页面标题不生效。借助搜索擎会查到如下解决方案:修改document.title后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。
+场景复原在单页应用中，页面切换都是通过监听路由变动，再动态获取下一页内容并展示。通常在获取新内容之前会伴有修改title的">
 
 
 
@@ -338,11 +341,11 @@
       
 
       
-        <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过<code>document.title</code>更新页面标题不生效。借助搜索擎会查到如下解决方案:<br>修改<code>document.title</code>后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。</p>
-<a id="more"></a>
+        <p>在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过<code>document.title</code>更新页面标题不生效。借助搜索擎会查到如下解决方案:<br>修改<code>document.title</code>后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。</p>
 <h2 id="场景复原"><a href="#场景复原" class="headerlink" title="场景复原"></a>场景复原</h2><p>在单页应用中，页面切换都是通过监听路由变动，再动态获取下一页内容并展示。通常在获取新内容之前会伴有修改title的动作。</p>
 <p>在PC浏览器里完全不用顾虑该问题，还记得那些客服网站上不断闪烁的标题么？就是通过不断修改<code>document.title</code>实现的。</p>
 <p>在移动浏览器上也没有这个问题，不管是iOS还是Android。但是在iOS下微信，以及支付宝等App中，通过扫码打开单页应用切换网页后，问题出现了。</p>
+<a id="more"></a>
 <h2 id="问题解决方案"><a href="#问题解决方案" class="headerlink" title="问题解决方案"></a>问题解决方案</h2><h3 id="解决方案一"><a href="#解决方案一" class="headerlink" title="解决方案一"></a>解决方案一</h3><p>怎么解决该方案呢，在搜索引擎上捣鼓一番后发现这样的解决方案:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeTitle</span>(<span class="params">title</span>) </span>&#123;</div><div class="line">  <span class="built_in">document</span>.title = title  </div><div class="line"></div><div class="line">  $(<span class="string">'&lt;iframe src="/title.html" style="display: none"&gt;&lt;/iframe&gt;'</span>).one(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      $(<span class="keyword">this</span>).remove() </div><div class="line">    &#125;, <span class="number">0</span>)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// when route change use this update your page title</span></div><div class="line">changeTitle(title)</div></pre></td></tr></table></figure>
 <p>该方案即是摘要里提到的hack方案。</p>
@@ -547,7 +550,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场景复原"><span class="nav-number">2.</span> <span class="nav-text">场景复原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决方案"><span class="nav-number">3.</span> <span class="nav-text">问题解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案一"><span class="nav-number">3.1.</span> <span class="nav-text">解决方案一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案二"><span class="nav-number">3.2.</span> <span class="nav-text">解决方案二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hack方案解析"><span class="nav-number">4.</span> <span class="nav-text">Hack方案解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题缘由"><span class="nav-number">4.1.</span> <span class="nav-text">问题缘由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器们是怎么处理该场景的"><span class="nav-number">4.2.</span> <span class="nav-text">浏览器们是怎么处理该场景的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小建议"><span class="nav-number">5.</span> <span class="nav-text">小建议</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景复原"><span class="nav-number">1.</span> <span class="nav-text">场景复原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决方案"><span class="nav-number">2.</span> <span class="nav-text">问题解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案一"><span class="nav-number">2.1.</span> <span class="nav-text">解决方案一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案二"><span class="nav-number">2.2.</span> <span class="nav-text">解决方案二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hack方案解析"><span class="nav-number">3.</span> <span class="nav-text">Hack方案解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题缘由"><span class="nav-number">3.1.</span> <span class="nav-text">问题缘由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器们是怎么处理该场景的"><span class="nav-number">3.2.</span> <span class="nav-text">浏览器们是怎么处理该场景的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小建议"><span class="nav-number">4.</span> <span class="nav-text">小建议</span></a></li></ol></div>
             
 
           </div>

@@ -343,7 +343,10 @@
 
       
         
-          <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过<code>document.title</code>更新页面标题不生效。借助搜索擎会查到如下解决方案:<br>修改<code>document.title</code>后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。</p>
+          <p>在微信、支付宝等类webview环境开发单页应用(SPA)时，会遇到这样的问题: 通过<code>document.title</code>更新页面标题不生效。借助搜索擎会查到如下解决方案:<br>修改<code>document.title</code>后，发送一个iframe请求即可。为什么这样Hack会生效？本文主要阐述该问题。</p>
+<h2 id="场景复原"><a href="#场景复原" class="headerlink" title="场景复原"></a>场景复原</h2><p>在单页应用中，页面切换都是通过监听路由变动，再动态获取下一页内容并展示。通常在获取新内容之前会伴有修改title的动作。</p>
+<p>在PC浏览器里完全不用顾虑该问题，还记得那些客服网站上不断闪烁的标题么？就是通过不断修改<code>document.title</code>实现的。</p>
+<p>在移动浏览器上也没有这个问题，不管是iOS还是Android。但是在iOS下微信，以及支付宝等App中，通过扫码打开单页应用切换网页后，问题出现了。</p>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/blog/2016/12/08/单页应用在Webview下修改标题失效问题分析/#more" rel="contents">
@@ -471,7 +474,7 @@
 
       
         
-          <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。</p>
+          <p>本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。</p>
 <h2 id="Universal-Link简介"><a href="#Universal-Link简介" class="headerlink" title="Universal Link简介"></a>Universal Link简介</h2><p>苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。</p>
 <h2 id="Universal-Link的优势"><a href="#Universal-Link的优势" class="headerlink" title="Universal Link的优势"></a>Universal Link的优势</h2><p>通过Universal Link，弥补了以往iOS下在Web里做应用调起的短板:</p>
 <ol>
