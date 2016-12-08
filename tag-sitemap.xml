@@ -17,14 +17,35 @@
 
     <url>
         <loc>http://www.sunxiaobo.com/tags/iOS/</loc>
-        <lastmod>2016-11-10T14:24:02.000Z</lastmod>
+        <lastmod>2016-12-07T14:52:16.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.sunxiaobo.com/tags/%E5%BA%94%E7%94%A8%E8%B0%83%E8%B5%B7/</loc>
-        <lastmod>2016-11-10T14:24:02.000Z</lastmod>
+        <lastmod>2016-12-07T14:52:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/webview/</loc>
+        <lastmod>2016-12-08T14:28:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/%E5%BE%AE%E4%BF%A1/</loc>
+        <lastmod>2016-12-08T14:28:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/SPA/</loc>
+        <lastmod>2016-12-08T14:28:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
