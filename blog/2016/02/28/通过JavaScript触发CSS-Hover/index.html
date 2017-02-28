@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="iOS,应用调起," />
+  <meta name="keywords" content="css,css hover,jshover," />
 
 
 
@@ -84,25 +84,21 @@
 
 
 
-<meta name="description" content="本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
-Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
-Universal Link的优势通过Universal Lin">
+<meta name="description" content="最近在做自动化测试时遇到一个问题：有些站点上菜单hover效果是用CSS写的，用CSS写有一些好处，比如只要CSS文件加载了就会生效，这样就不用去管JS是否加载完成。间接导致的问题就是做UI测试不太方便，直接通过trigger(&amp;#39;mouseover&amp;#39;)并不会触发CSS定义的hover效果。那么该怎么解决呢？
+其实可以这样：给这个元素添加一个选择器(class或attribute等都">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Universal Link使用总结">
-<meta property="og:url" content="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/index.html">
+<meta property="og:title" content="通过JavaScript触发CSS Hover">
+<meta property="og:url" content="http://www.sunxiaobo.com/blog/2016/02/28/通过JavaScript触发CSS-Hover/index.html">
 <meta property="og:site_name" content="Xiaobo's Blog">
-<meta property="og:description" content="本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
-Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
-Universal Link的优势通过Universal Lin">
-<meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/error.jpeg">
-<meta property="og:image" content="http://www.sunxiaobo.com/images/universal link使用总结/domain.jpeg">
-<meta property="og:updated_time" content="2017-02-28T16:02:22.000Z">
+<meta property="og:description" content="最近在做自动化测试时遇到一个问题：有些站点上菜单hover效果是用CSS写的，用CSS写有一些好处，比如只要CSS文件加载了就会生效，这样就不用去管JS是否加载完成。间接导致的问题就是做UI测试不太方便，直接通过trigger(&amp;#39;mouseover&amp;#39;)并不会触发CSS定义的hover效果。那么该怎么解决呢？
+其实可以这样：给这个元素添加一个选择器(class或attribute等都">
+<meta property="og:image" content="http://www.sunxiaobo.com/images/通过JavaScript触发CSS Hover/document.styleSheets.png">
+<meta property="og:updated_time" content="2017-02-28T16:02:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Universal Link使用总结">
-<meta name="twitter:description" content="本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。
-Universal Link简介苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。
-Universal Link的优势通过Universal Lin">
-<meta name="twitter:image" content="http://www.sunxiaobo.com/images/universal link使用总结/error.jpeg">
+<meta name="twitter:title" content="通过JavaScript触发CSS Hover">
+<meta name="twitter:description" content="最近在做自动化测试时遇到一个问题：有些站点上菜单hover效果是用CSS写的，用CSS写有一些好处，比如只要CSS文件加载了就会生效，这样就不用去管JS是否加载完成。间接导致的问题就是做UI测试不太方便，直接通过trigger(&amp;#39;mouseover&amp;#39;)并不会触发CSS定义的hover效果。那么该怎么解决呢？
+其实可以这样：给这个元素添加一个选择器(class或attribute等都">
+<meta name="twitter:image" content="http://www.sunxiaobo.com/images/通过JavaScript触发CSS Hover/document.styleSheets.png">
 
 
 
@@ -130,13 +126,13 @@ Universal Link的优势通过Universal Lin">
 
 
 
-  <link rel="canonical" href="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/"/>
+  <link rel="canonical" href="http://www.sunxiaobo.com/blog/2016/02/28/通过JavaScript触发CSS-Hover/"/>
 
 
 
 
 
-  <title> Universal Link使用总结 | Xiaobo's Blog </title>
+  <title> 通过JavaScript触发CSS Hover | Xiaobo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +263,7 @@ Universal Link的优势通过Universal Lin">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/">
+  <link itemprop="mainEntityOfPage" href="http://www.sunxiaobo.com/blog/2016/02/28/通过JavaScript触发CSS-Hover/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Xiaobo">
@@ -291,7 +287,7 @@ Universal Link的优势通过Universal Lin">
             
             
               
-                Universal Link使用总结
+                通过JavaScript触发CSS Hover
               
             
           </h1>
@@ -304,8 +300,8 @@ Universal Link的优势通过Universal Lin">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-08T00:00:00+08:00">
-                2016-11-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-28T00:00:00+08:00">
+                2016-02-28
               </time>
             
 
@@ -320,8 +316,8 @@ Universal Link的优势通过Universal Lin">
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/blog/2016/11/08/Universal-Link使用总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/11/08/Universal-Link使用总结/" itemprop="commentCount"></span>
+                <a href="/blog/2016/02/28/通过JavaScript触发CSS-Hover/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="blog/2016/02/28/通过JavaScript触发CSS-Hover/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -331,7 +327,7 @@ Universal Link的优势通过Universal Lin">
 
           
           
-             <span id="/blog/2016/11/08/Universal-Link使用总结/" class="leancloud_visitors" data-flag-title="Universal Link使用总结">
+             <span id="/blog/2016/02/28/通过JavaScript触发CSS-Hover/" class="leancloud_visitors" data-flag-title="通过JavaScript触发CSS Hover">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -356,70 +352,32 @@ Universal Link的优势通过Universal Lin">
       
 
       
-        <p>本文主要介绍在接入和使用Universal Link过程中，遇到的一些问题以及经验总结，不包含对Universal Link的详细介绍和完整接入流程。</p>
-<h2 id="Universal-Link简介"><a href="#Universal-Link简介" class="headerlink" title="Universal Link简介"></a>Universal Link简介</h2><p>苹果从iOS9开始引入的技术方案，通过将App和网站域名绑定，实现点击域名即可打开客户端的效果(前提是安装有客户端，如果没有安装会跳到域名对应网址)。</p>
-<h2 id="Universal-Link的优势"><a href="#Universal-Link的优势" class="headerlink" title="Universal Link的优势"></a>Universal Link的优势</h2><p>通过Universal Link，弥补了以往iOS下在Web里做应用调起的短板:</p>
+        <p>最近在做自动化测试时遇到一个问题：有些站点上菜单hover效果是用CSS写的，用CSS写有一些好处，比如只要CSS文件加载了就会生效，这样就不用去管JS是否加载完成。间接导致的问题就是做UI测试不太方便，直接通过<code>trigger(&#39;mouseover&#39;)</code>并不会触发CSS定义的hover效果。那么该怎么解决呢？</p>
+<p>其实可以这样：给这个元素添加一个选择器(class或attribute等都行)，然后把该选择器定义成和其hover相同的样式。</p>
+<p>基本思路已定，就该分析需要解决哪些问题了。相关问题主要有以下几个：</p>
 <ol>
-<li>无法检测到应用调起是否成功。</li>
-<li>无法在一些做了限制的App里调起，如: 微信，QQ等。</li>
-<li>从iOS9 Safari开始只能用location.href调起</li>
-<li>其它第三方浏览器还可以用iframe方案调起</li>
+<li>获取到元素对应的:hover样式</li>
+<li>复制样式定义到新选择器</li>
+<li>将新选择器添加到目标元素上，效果实现</li>
 </ol>
-<p>对于问题1，以往我们也做过各种尝试:</p>
-<ol>
-<li>通过setTimeout/setInterval计算间隔时间</li>
-<li>结合pageshow, pagehide等事件<br>这些方案都是开发者hack出来的，非官方推荐和支持，总结成五个字就是:都不太靠谱。</li>
-</ol>
-<p>对于问题2，大多数公司和开发者都无解。</p>
+<p>接下来对这些问题，我们一个个来解决。</p>
 <a id="more"></a>
-<p>对于问题3和4，就是方案不统一导致的体验也有差异。比如用location.href在Safari里做应用调起，假如没有安装App，会有如下弹框提示:<br><img src="/images/universal link使用总结/error.jpeg" alt="location.href错误提示" width="50%" border="0"></p>
-<p>如果用了Universal Link，这些问题都会被解决!</p>
-<h2 id="Universal-Link的接入"><a href="#Universal-Link的接入" class="headerlink" title="Universal Link的接入"></a>Universal Link的接入</h2><p>苹果官方提供的开发文档：<a href="https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html" target="_blank" rel="external">App Search Programming Guide: Support Universal Links</a>，下面简要介绍下各部分实现。</p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>实现主要分以下三部分：</p>
-<ul>
-<li>服务端配置: 定义绑定的客户端信息</li>
-<li>客户端配置: 定义绑定的服务端信息</li>
-<li>通信机制: 搭建连接两端的桥梁  </li>
-</ul>
-<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>对服务端环境有以下几点要求:</p>
-<ul>
-<li>网站必须能支持HTTPS</li>
-<li>有两个不同域名指向，详见下文</li>
-<li>上传配置文件apple-app-site-association</li>
-</ul>
-<p>下面代码是一个apple-app-site-association的范例，仅供参考。<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"applinks"</span>: &#123;</div><div class="line">    <span class="attr">"apps"</span>: [],</div><div class="line">    <span class="attr">"details"</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">"appID"</span>: <span class="string">"2232JSIDLA.com.autonavi.amap"</span>,</div><div class="line">        <span class="attr">"paths"</span>: [ <span class="string">"/applink/*"</span> ]  </div><div class="line">      &#125; </div><div class="line">    ]  </div><div class="line">  &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><p>客户端方面，首先需要在Xcode的<strong>capabilities</strong>里添加绑定域名的信息，如下图：</p>
-<p><img src="/images/universal link使用总结/domain.jpeg" alt="location.href错误提示" border="0"></p>
-<p>上图一共绑定了四个域名，实际可以看成是两对：</p>
-<ul>
-<li>m.amap.com 和 www.m.amap.com</li>
-<li>mo.amap.com 和 www.mo.amap.com</li>
-</ul>
-<p><strong>需要注意的是</strong>：</p>
-<ul>
-<li>m.amap.com 和 mo.amap.com最好都指向同一个Web服务，即访问m.amap.com和mo.amap.com看到的内容是一样的，原因后文再讲。</li>
-<li>www.m.amap.com和www.mo.amap.com是官方要求配置的，并未要求访问这两个域名能请求到服务，即使访问之后是502, 404等是没问题的。</li>
-</ul>
-<p>剩下要做的就是在AppDelegate里写些代码支持Universal Link，这里不赘述了。</p>
-<h3 id="服务端和客户端之间通信"><a href="#服务端和客户端之间通信" class="headerlink" title="服务端和客户端之间通信"></a>服务端和客户端之间通信</h3><p>接下来要解决的问题是：点击一个URL时让客户端知道要打开哪个view？</p>
-<p>通常我们在Web里调起客户端都是用scheme，而通过universal link调起客户端是用url。所以最简便的方案是直接把可以调起客户端的scheme附加到universal link地址后传到客户端，客户端收到后直接解析scheme参数的值就清楚该显示哪个view,也不用再和客户端约定另外一套规则。</p>
-<h2 id="Universal-Link那些坑"><a href="#Universal-Link那些坑" class="headerlink" title="Universal Link那些坑"></a>Universal Link那些坑</h2><p>这部分主要是官方文档中未提及并且实践中会遇到的问题。</p>
-<h3 id="触发场景"><a href="#触发场景" class="headerlink" title="触发场景"></a>触发场景</h3><p>只能通过点击触发<br>只能通过点击触发<br>只能通过点击触发</p>
-<p>不像以往的调起方案，在没有任何交互情况下可通过设置<code>iframe.src</code> 或 <code>location.href</code> 自动调起客户端。Universal Link的触发机制必须是通过点击触发，以下场景都可以触发：</p>
-<ul>
-<li>点击一个a标签，href值是universal link地址</li>
-<li>点击任意元素，该元素的click事件里修改当前location.href指向到universal link地址<br>上述场景中第二个会是经常碰到的，因为涉及到univesal link另外一个坑。</li>
-</ul>
-<h3 id="在Universal-Link绑定域名A下打开Universal-Link"><a href="#在Universal-Link绑定域名A下打开Universal-Link" class="headerlink" title="在Universal Link绑定域名A下打开Universal Link"></a>在Universal Link绑定域名A下打开Universal Link</h3><p>假设客户端绑定了域名a.xx.com，那么a.xx.com就可以看做是一个Universal Link地址。如果当前网页url就是a.xx.com下的地址，能通过修改location.href指向另外一个a.xx.com下地址打开客户端么？</p>
-<p>答案是：不能！</p>
-<p>这里我们猜测下Apple为什么要这么做？</p>
-<p>在<a href="https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html" target="_blank" rel="external">App Search Programming Guide: Support Universal Link</a>里，有这么一段话：</p>
-<p><code>When a user taps a universal link that you handle, iOS also examines the user’s recent choices to determine whether to open your app or your website. For example, a user who has tapped a universal link to open your app can later choose to open your website in Safari by tapping a breadcrumb button in the status bar. After the user makes this choice, iOS continues to open your website in Safari until the user chooses to open your app by tapping OPEN in the Smart App Banner on the webpage.</code></p>
-<p>简单讲就是点击Universal Link地址时，iOS会检查最近的用户操作习惯，如果之前通过Universal Link打开客户端后点击了右上角的网址跳到了Safari里浏览，那么iOS会认为用户更倾向于在浏览器里所以自动的跳到了Safari而非绑定的客户端。</p>
-<p>这也是Universal Link会失效的一个场景。回到上一个问题，在a.xx.com下打开a.xx.com下另一个地址为什么不能打开客户端?</p>
-<p>Apple认为既然当前是在浏览器里浏览，即使a.xx.com下另外的地址也还是和当前域名类似的服务，这里<strong>默认了用户更倾向于在浏览器里使用所以自动屏蔽了打开客户端的动作</strong>。</p>
-<p>那这里怎么办呢？别忘了在实现部分我们提过要绑定两个域名，另外的域名就是在这里用到的，点击跳转时跳转到和当前域名不一样的另外的域名就行啦。</p>
-<p>这也是上文提到绑定click事件修改location.href为universal link地址场景比较常用的原因，我们需要在click事件中判断当前域名，然后把location.href改到另外的域名。假如是服务端生成模板的话也可以直接在模板引擎中设置相反的值，都是一样的。</p>
+<h2 id="获取到元素对应的-hover样式"><a href="#获取到元素对应的-hover样式" class="headerlink" title="获取到元素对应的:hover样式"></a>获取到元素对应的:hover样式</h2><p>对于这个问题，一般存在三种情况：</p>
+<ol>
+<li>网页里样式都是用style内联的</li>
+<li>网页里样式是link和style混搭</li>
+<li>网页里样式是纯link外联</li>
+</ol>
+<h3 id="网页样式都是style内联"><a href="#网页样式都是style内联" class="headerlink" title="网页样式都是style内联"></a>网页样式都是style内联</h3><p>移动站上比较流行这种方式，因为可以结合localStorage做本地缓存，相比link外联还是会快许多。对于纯style内联样式的网页，首先要读取所有style的标签内容,并过滤出只含有对目标DOM生效的hover样式定义，相关代码如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getHoverDefintion</span>(<span class="params">targetDom</span>) </span>&#123;</div><div class="line">  <span class="comment">// 将style标签转成数组，同时把整个style定义拆分成单条样式定义</span></div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    [].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'style'</span>)).map(<span class="function"><span class="params">dom</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> dom.innerText.split(<span class="string">'&#125;'</span>).map( <span class="function"><span class="params">val</span> =&gt;</span> <span class="string">`<span class="subst">$&#123;val&#125;</span>&#125;`</span> )   </div><div class="line">    &#125;)</div><div class="line">    .reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> [...a, ...b]</div><div class="line">    &#125;, [])</div><div class="line">    <span class="comment">// 过滤带有:hover的</span></div><div class="line">    .filter(<span class="function"><span class="params">cssText</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="regexp">/:hover/</span>.test(cssText)  </div><div class="line">    &#125;)</div><div class="line">    <span class="comment">// 映射成选择器和样式定义的kv</span></div><div class="line">    .map(<span class="function"><span class="params">cssText</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">selectors</span>: cssText.split(<span class="string">'&#123;'</span>)[<span class="number">0</span>].split(<span class="string">','</span>),</div><div class="line">        <span class="attr">css</span>: <span class="string">`&#123;<span class="subst">$&#123;cssText.split(<span class="string">'&#123;'</span>)[<span class="number">1</span>]&#125;</span>`</span></div><div class="line">      &#125;  </div><div class="line">    &#125;)</div><div class="line">    <span class="comment">// 过滤匹配targetDom的样式定义</span></div><div class="line">    .filter(<span class="function">(<span class="params">&#123; selectors &#125;</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">return</span> selectors.some(<span class="function"><span class="params">selector</span> =&gt;</span> <span class="built_in">document</span>.querySelector(selector) === targetDom) </div><div class="line">    &#125;)</div><div class="line">    <span class="comment">// 只返回样式定义部分</span></div><div class="line">    .map(<span class="function">(<span class="params">&#123; css &#125;</span>) =&gt;</span> css&#125;) </div><div class="line">  )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>style中有用的样式定义拿到后，就该添加自己定义的选择器了，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addHoverClass</span>(<span class="params">targetDom, newSelector, cssDefintion = []</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> cssText = cssDefintion.map(<span class="function"><span class="params">css</span> =&gt;</span> <span class="string">`<span class="subst">$&#123;newSelector&#125;</span> <span class="subst">$&#123;css&#125;</span>`</span>)</div><div class="line">  <span class="keyword">const</span> style = <span class="built_in">document</span>.createElement(<span class="string">'style'</span>)</div><div class="line"></div><div class="line">  style.setAttribute(<span class="string">'data-hover'</span>, newSelector)</div><div class="line">  style.innerText = cssText</div><div class="line"></div><div class="line">  <span class="built_in">document</span>.body.appendChild(style)</div><div class="line">  targetDom.classList.add(newSelector)</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="built_in">document</span>.body.removeChild(style)  </div><div class="line">    targetDom.classList.remove(newSelector)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>OK，通过<code>addHoverClass</code>方法，即实现了整个效果。同时调用<code>addHoverClass</code>方法后会返回对应的blur方法，要取消hover状态时执行就好了。</p>
+<h2 id="网页还有link外联的样式"><a href="#网页还有link外联的样式" class="headerlink" title="网页还有link外联的样式"></a>网页还有link外联的样式</h2><p>如果只有style内联样式还好说，可以拿到里面定义的内容。但用link外联样式也是十分常见的情形，这种方式就没法通过<code>innerText</code>获取其定义的样式了。那该用什么呢?</p>
+<p>其实有个对象: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheets" target="_blank" rel="external">document.styleSheets</a> 这个对象很好用，在尝试解决该问题前，我也没留意过有这个对象。通过名字就能感觉到，<code>document.styleSheets</code>大概是包含了所有样式定义相关的内容，没错就是这样。</p>
+<p><img src="/images/通过JavaScript触发CSS Hover/document.styleSheets.png" alt="document.styleSheets"></p>
+<p>通过查看内容发现，<code>document.styleSheets</code>中包含所有相关的样式内容，包括style和link的都有，这样只对<code>document.styleSheets</code>解析就可以了，这样一来，需要对之前的脚本稍微改造一下。</p>
+<p>未完待续…</p>
 
       
     </div>
@@ -443,9 +401,11 @@ Universal Link的优势通过Universal Lin">
       
         <div class="post-tags">
           
-            <a href="/tags/iOS/" rel="tag"># iOS</a>
+            <a href="/tags/css/" rel="tag"># css</a>
           
-            <a href="/tags/应用调起/" rel="tag"># 应用调起</a>
+            <a href="/tags/css-hover/" rel="tag"># css hover</a>
+          
+            <a href="/tags/jshover/" rel="tag"># jshover</a>
           
         </div>
       
@@ -454,18 +414,14 @@ Universal Link的优势通过Universal Lin">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2016/10/08/gitcm,让你提交代码更自由/" rel="next" title="gitcm,让你提交代码更自由">
-                <i class="fa fa-chevron-left"></i> gitcm,让你提交代码更自由
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2016/12/08/单页应用(SPA)在Webview下修改标题失效问题分析/" rel="prev" title="单页应用(SPA)在Webview下修改标题失效问题分析">
-                单页应用(SPA)在Webview下修改标题失效问题分析 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2016/10/08/gitcm,让你提交代码更自由/" rel="prev" title="gitcm,让你提交代码更自由">
+                gitcm,让你提交代码更自由 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -481,10 +437,10 @@ Universal Link的优势通过Universal Lin">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="blog/2016/11/08/Universal-Link使用总结/"
-     data-title="Universal Link使用总结"
+        <div class="ds-share flat" data-thread-key="blog/2016/02/28/通过JavaScript触发CSS-Hover/"
+     data-title="通过JavaScript触发CSS Hover"
      data-content=""
-     data-url="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/">
+     data-url="http://www.sunxiaobo.com/blog/2016/02/28/通过JavaScript触发CSS-Hover/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -511,8 +467,8 @@ Universal Link的优势通过Universal Lin">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="blog/2016/11/08/Universal-Link使用总结/"
-           data-title="Universal Link使用总结" data-url="http://www.sunxiaobo.com/blog/2016/11/08/Universal-Link使用总结/">
+      <div class="ds-thread" data-thread-key="blog/2016/02/28/通过JavaScript触发CSS-Hover/"
+           data-title="通过JavaScript触发CSS Hover" data-url="http://www.sunxiaobo.com/blog/2016/02/28/通过JavaScript触发CSS-Hover/">
       </div>
     
   </div>
@@ -602,7 +558,7 @@ Universal Link的优势通过Universal Lin">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link简介"><span class="nav-number">1.</span> <span class="nav-text">Universal Link简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link的优势"><span class="nav-number">2.</span> <span class="nav-text">Universal Link的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link的接入"><span class="nav-number">3.</span> <span class="nav-text">Universal Link的接入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端"><span class="nav-number">3.2.</span> <span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端"><span class="nav-number">3.3.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端和客户端之间通信"><span class="nav-number">3.4.</span> <span class="nav-text">服务端和客户端之间通信</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Universal-Link那些坑"><span class="nav-number">4.</span> <span class="nav-text">Universal Link那些坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#触发场景"><span class="nav-number">4.1.</span> <span class="nav-text">触发场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在Universal-Link绑定域名A下打开Universal-Link"><span class="nav-number">4.2.</span> <span class="nav-text">在Universal Link绑定域名A下打开Universal Link</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取到元素对应的-hover样式"><span class="nav-number">1.</span> <span class="nav-text">获取到元素对应的:hover样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网页样式都是style内联"><span class="nav-number">1.1.</span> <span class="nav-text">网页样式都是style内联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页还有link外联的样式"><span class="nav-number">2.</span> <span class="nav-text">网页还有link外联的样式</span></a></li></ol></div>
             
 
           </div>
