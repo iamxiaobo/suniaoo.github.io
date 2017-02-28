@@ -37,27 +37,6 @@
     </url>
 
     <url>
-        <loc>http://www.sunxiaobo.com/tags/css/</loc>
-        <lastmod>2017-02-28T16:02:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.sunxiaobo.com/tags/css-hover/</loc>
-        <lastmod>2017-02-28T16:02:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.sunxiaobo.com/tags/jshover/</loc>
-        <lastmod>2017-02-28T16:02:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.sunxiaobo.com/tags/iOS/</loc>
         <lastmod>2017-02-28T16:02:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +46,27 @@
     <url>
         <loc>http://www.sunxiaobo.com/tags/%E5%BA%94%E7%94%A8%E8%B0%83%E8%B5%B7/</loc>
         <lastmod>2017-02-28T16:02:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/css/</loc>
+        <lastmod>2017-02-28T16:11:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/css-hover/</loc>
+        <lastmod>2017-02-28T16:11:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.sunxiaobo.com/tags/jshover/</loc>
+        <lastmod>2017-02-28T16:11:31.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
